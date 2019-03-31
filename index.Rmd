@@ -1,20 +1,21 @@
 ---
-title: "Dev Data Products Prj2"
+title: "Untitled"
 author: "Rohan Chakravarthy"
-date: "27 March 2019"
-output:
-  html_document: default
-  pdf_document: default
+date: "31 March 2019"
+output: html_document
 ---
-#Paris Map
+
+#Eiffel Tower Map
 ```{r P1}
 library(leaflet)
 knitr::opts_chunk$set(echo = TRUE)
-```
 
-```{r P2}
-EiffelTour <- c("<a href= 'https://www.toureiffel.paris/en/access-map'>Eiffel Tour</a>")
-leaflet() %>%
-addTiles() %>%
-addMarkers(lat=48.858053, lng=2.294289, popup = EiffelTour)
+my_map <- leaflet() %>%
+  addTiles()
+
+my_map <- my_map %>%
+  addMarkers(lat=48.858053, lng=2.294289,
+             popup="Eiffel Tower ")
+my_map
+
 ```
