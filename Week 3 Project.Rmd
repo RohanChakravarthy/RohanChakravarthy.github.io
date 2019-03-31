@@ -1,0 +1,31 @@
+---
+title: "Developing Data Products Week 3 Project"
+author: "Rohan Chakravarthy"
+date: "30 March 2019"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+## Overview
+### Plotly package was used to create this chart
+### Presentation was created using RStudio
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Code
+
+```{r C1, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+
+```
+
+## R Plot
+```{r C2, echo = TRUE}
+plot_ly(mtcars, x = ~wt, y = ~mpg, type = "scatter", color = ~factor(cyl), size = ~hp)
+```
+
+### Thank you
